@@ -14,7 +14,7 @@ def page3():
     st.sidebar.markdown("# Page 3 🎉")
 
 page_names_to_funcs = {
-    "Main Page": main_page,
+    "Main Page": streamlit_app,
     "Page 2": page1,
 }
 
