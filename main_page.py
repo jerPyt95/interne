@@ -1,22 +1,18 @@
-# Contents of ~/my_app/streamlit_app.py
 import streamlit as st
+from main_page import main_page
+from pages.page2 import page2
 
-def main_page():
-    st.markdown("# Main page 🎈")
-    st.sidebar.markdown("# Main page 🎈")
+def run_page(page_function):
+    page_function()
 
-def page2():
-    st.markdown("# Page 2 ❄️")
-    st.sidebar.markdown("# Page 2 ❄️")
-
-def page3():
-    st.markdown("# Page 3 🎉")
-    st.sidebar.markdown("# Page 3 🎉")
-
-page_names_to_funcs = {
-    "Main Page": main_page,
+pages = {
+    "Main page": main_page,
     "Page 2": page2,
 }
 
-selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
-page_names_to_funcs[selected_page]()
+st.sidebar.title('Navigation')
+selection = st.sidebar.radio("Go to", list(pages.keys()))
+
+page_function = pages[selection]
+
+run_page(page_function)
