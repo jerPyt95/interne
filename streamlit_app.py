@@ -24,29 +24,6 @@ import mechanicalsoup
 import json
 import altair as alt
 
-
-# Page "Accueil"
-def accueil():
-    st.title("Accueil")
-    st.write("Bienvenue sur la page d'accueil !")
-
-# Page "À propos"
-def a_propos():
-    st.title("À propos")
-    st.write("C'est la page qui présente des informations sur l'application.")
-
-# Création du menu
-menu = ["Accueil", "À propos"]
-choice = st.sidebar.selectbox("Menu", menu)
-
-# Affichage de la page correspondante au choix de l'utilisateur
-if choice == "Accueil":
-    accueil()
-elif choice == "À propos":
-    a_propos()
-
-
-
 # Créez un dictionnaire avec vos informations de compte de service
 service_account_info = {
   "type": "service_account",
