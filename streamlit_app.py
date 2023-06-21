@@ -1,12 +1,12 @@
 import streamlit as st
-from streamlit_app import streamlit_app
+from main_page import main_page
 from pages.page2 import page2
 
 def run_page(page_function):
     page_function()
 
 pages = {
-    "Main page": streamlit_app,
+    "Main page": main_page,
     "Page 2": page2,
 }
 
