@@ -24,6 +24,10 @@ import mechanicalsoup
 import json
 import altair as alt
 
+# Création du menu
+menu = ["Accueil", "À propos"]
+choice = st.sidebar.selectbox("Menu", menu)
+
 # Créez un dictionnaire avec vos informations de compte de service
 service_account_info = {
   "type": "service_account",
