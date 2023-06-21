@@ -24,6 +24,7 @@ import mechanicalsoup
 import json
 import altair as alt
 
+
 # Créez un dictionnaire avec vos informations de compte de service
 service_account_info = {
   "type": "service_account",
